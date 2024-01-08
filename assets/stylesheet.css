@@ -1,0 +1,32 @@
+/* --- VARIABLES --- */
+:root {
+
+    /* COLORS */
+    --primaryColor: #255D28;
+    --primaryTransparentColor: rgba(36, 92, 39, 50%);
+    --secondaryColor: #C43722;
+    --secondaryTransparentColor: rgba(195, 56, 34, 50%);
+    --interactableColor: #003150;
+    --interactableTransparentColor: rgba(0, 50, 82, 50%);
+    --textbackgroundColor: rgba(0, 0, 0, 35%);
+    --hoverButtonColor: #1a4f70;
+    --backgroundColor: #ffffff;
+
+    --baseTextDarkColor: #141F14;
+    --baseTextLightColor: #FFFFFF;
+
+    /* TEXT SIZES */
+    --titleSizeMobile: 2.5rem;
+    --baseTextSizeMobile: .9rem;
+
+    /* SPACING */
+    --smallSpacing: 10px;
+    --standardSpacing: 15px;
+    --mediumSpacing: 20px;
+    --largeSpacing: 30px;
+    --xLargeSpacing: 50px;
+
+    /* DETAILS */
+    --borderRadius: 3px;
+
+}
