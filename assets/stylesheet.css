@@ -2,18 +2,13 @@
 :root {
 
     /* COLORS */
-    --primaryColor: #255D28;
-    --primaryTransparentColor: rgba(36, 92, 39, 50%);
-    --secondaryColor: #C43722;
-    --secondaryTransparentColor: rgba(195, 56, 34, 50%);
-    --interactableColor: #003150;
-    --interactableTransparentColor: rgba(0, 50, 82, 50%);
-    --textbackgroundColor: rgba(0, 0, 0, 35%);
-    --hoverButtonColor: #1a4f70;
-    --backgroundColor: #ffffff;
-
-    --baseTextDarkColor: #141F14;
-    --baseTextLightColor: #FFFFFF;
+    --primaryColor: #DFDFDF;
+    --secondaryColor: rgba(35, 55, 127, 0.3);
+    --accentColor: #23377F;
+    --interactableColor: #E31E24;
+    --hoverButtonColor: #ce171d;
+    --backgroundColor: #EEEDE8;
+    --baseTextDarkColor: #232323;
 
     /* TEXT SIZES */
     --titleSizeMobile: 2.5rem;
@@ -28,5 +23,47 @@
 
     /* DETAILS */
     --borderRadius: 3px;
+    --round: 50%;
 
+}
+
+/* --- GENERALS --- */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    text-wrap: balance;
+}
+
+.fullWidth {
+    grid-column: 1 /-1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Primary background colour Box */
+.primaryBackgroundBox {
+    background: var(--primaryColor);
+}
+
+/* Secondary background colour Box */
+.secondaryBackgroundBox {
+    background: var(--secondaryColor);
+}
+
+main {
+    display: grid;
+    grid-template-columns: var(--standardSpacing) repeat(4, 1fr) var(--standardSpacing);
+    grid-template-rows: auto;
+}
+
+section {
+    grid-column: 2/-2;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    background-color: var(--interactableColor);
+    border-radius: var(--borderRadius);
+    color: white;
 }
