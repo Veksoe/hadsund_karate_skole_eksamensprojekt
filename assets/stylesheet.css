@@ -59,18 +59,13 @@ section {
 }
 
 a {
-    color: var(--interactableColor);
+
     text-decoration: none;
 }
 
-a:hover {
-    /* flyttes til media querry*/
-    background: var(--interactableColor);
-    color: white;
-    padding: 5px;
-    border-radius: var(--borderRadius);
+i {
+    color: var(--accentColor);
 }
-
 
 .fullWidth {
     grid-column: 1 /-1;
@@ -205,6 +200,26 @@ a .logo {
 
 }
 
+a.text {
+    color: var(--interactableColor);
+    text-decoration: underline;
+}
+
+a:hover.text {
+    /* flyttes til media querry*/
+    background: var(--interactableColor);
+    color: white;
+    padding: 5px;
+    border-radius: var(--borderRadius);
+}
+
+a[href^="tel:"] {
+    color: var(--baseTextDarkColor);
+}
+
+a[href^="mailto:"] {
+    color: var(--baseTextDarkColor);
+}
 
 /* --- NAVBAR --- */
 nav {
@@ -215,11 +230,69 @@ nav {
     justify-content: space-between;
 }
 
+/* --- FOOTER --- */
+footer {
+    box-shadow: 3px 0px 10px rgb(138, 137, 137);
+    padding: var(--standardSpacing);
+    display: flex;
+    flex-direction: column;
+}
+
+footer img {
+    width: 100%;
+    margin: var(--standardSpacing) 0;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerContainer .sitemap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sitemap a {
+    color: var(--baseTextDarkColor);
+    text-transform: uppercase;
+}
+
+footer i {
+    font-size: 30px;
+}
+
+footer .contact p {
+    margin: 0;
+}
+
+footer .contact .item {
+    display: flex;
+    align-items: center;
+    gap: var(--smallSpacing);
+    margin-bottom: var(--smallSpacing) ;
+}
+.soMe{
+    display: flex;
+    justify-content: center;
+    gap: var(--largeSpacing);
+    
+}
+.copyright{
+    text-align: center;
+}
+
 /* --- FOCUS ENTRY POINTS --- */
 .focusEntrypoint {
     grid-column: 2/-2;
     height: 150px;
+    margin: var(--smallSpacing) 0;
 
+}
+
+.focusEntrypoint .imgContainer {
+    height: 120px;
 }
 
 .focusEntrypoint img {
@@ -285,17 +358,18 @@ nav {
 .instructor .orange {
     background: orange;
 }
+
 /* --- IMG WITH TEXT --- */
-.imgTextBox{
+.imgTextBox {
     grid-column: 2/-2;
     border-radius: var(--borderRadius);
     box-shadow: 5px 5px 8px lightgray;
     background: white;
-    margin: var(--smallSpacing);
+    margin: var(--smallSpacing) 0;
     padding: var(--standardSpacing);
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
 }
 
 .imgTextBox img {
@@ -303,20 +377,59 @@ nav {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    
+
 }
-.bestyrelse{
+
+.bestyrelse {
     display: flex;
+
+    gap: var(--smallSpacing);
 }
-.bestyrelse .imgTextBox
-{
+
+.bestyrelse .imgTextBox {
     width: 50%;
-   
+
 }
-.bestyrelse .imgTextBox img{
+
+.bestyrelse .imgTextBox img {
     width: 110px;
     height: 110px;
 }
-.rolleText{
+
+.rolleText {
     font-style: italic;
+}
+
+/* --- COLORED BOX --- */
+.coloredBox {
+    grid-column: 2/-2;
+
+}
+
+.coloredBox .heading {
+    display: flex;
+    align-items: center;
+    gap: var(--smallSpacing);
+}
+
+.coloredBox i {
+    font-size: 60px;
+}
+
+.number {
+    font-size: 40px;
+    color: var(--accentColor);
+}
+
+.coloredBox h2 {
+    width: 100%;
+}
+
+.coloredBox .background {
+    background: var(--primaryColor);
+    padding: var(--mediumSpacing) var(--standardSpacing);
+}
+
+.coloredBox .background h2 {
+    text-align: left;
 }
