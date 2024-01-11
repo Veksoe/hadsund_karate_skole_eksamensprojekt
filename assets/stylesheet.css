@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
+
 /* --- VARIABLES --- */
 :root {
 
@@ -7,6 +9,7 @@
     --accentColor: #23377F;
     --interactableColor: #E31E24;
     --hoverButtonColor: #ce171d;
+    --disableButtonColor: #A57274;
     --backgroundColor: #EEEDE8;
     --baseTextDarkColor: #232323;
 
@@ -24,6 +27,7 @@
     /* DETAILS */
     --borderRadius: 3px;
     --round: 50%;
+    --shadow: 3px 3px 8px gray;
 
 }
 
@@ -35,21 +39,6 @@
     text-wrap: balance;
 }
 
-.fullWidth {
-    grid-column: 1 /-1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Primary background colour Box */
-.primaryBackgroundBox {
-    background: var(--primaryColor);
-}
-
-/* Secondary background colour Box */
-.secondaryBackgroundBox {
-    background: var(--secondaryColor);
-}
 
 main {
     display: grid;
@@ -57,8 +46,101 @@ main {
     grid-template-rows: auto;
 }
 
+body {
+    margin: 0;
+    background: var(--backgroundColor);
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+}
+
 section {
     grid-column: 2/-2;
+    margin: var(--mediumSpacing) 0;
+}
+
+a {
+    color: var(--interactableColor);
+    text-decoration: none;
+}
+
+a:hover {
+    /* flyttes til media querry*/
+    background: var(--interactableColor);
+    color: white;
+    padding: 5px;
+    border-radius: var(--borderRadius);
+}
+
+
+.fullWidth {
+    grid-column: 1 /-1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Primary background colour Box */
+.leftBackgroundBoxMobile {
+    background: var(--primaryColor);
+    padding: var(--mediumSpacing) var(--mediumSpacing);
+    grid-column: 2/-1;
+}
+
+/* Secondary background colour Box */
+.rightBackgroundBoxMobile {
+    background: var(--secondaryColor);
+    padding: var(--mediumSpacing) var(--mediumSpacing);
+    grid-column: 1/-2;
+}
+
+/* --- TEXT --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    grid-column: 2 / -2;
+    text-align: center;
+    margin: var(--smallSpacing) 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: var(--xLargeSpacing) 0 var(--mediumSpacing) 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--accentColor);
+    font-style: italic;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+p {
+    grid-column: 2/-2;
+    text-align: left;
+    margin: var(--smallSpacing) 0;
+
+}
+
+p.instructorNavn {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: -10px var(--smallSpacing);
+}
+
+p.accentText {
+    font-size: 1.1rem;
+    font-style: italic;
+
+    margin: 0 var(--smallSpacing);
 }
 
 /* --- BUTTONS --- */
@@ -66,4 +148,175 @@ section {
     background-color: var(--interactableColor);
     border-radius: var(--borderRadius);
     color: white;
+    height: 50px;
+    padding: 0 var(--largeSpacing);
+    grid-column: 2/-2;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: var(--smallSpacing) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    /* flyttes til media querry*/
+    background: var(--hoverButtonColor);
+    font-size: 1.3rem;
+}
+
+.userBtn {
+    max-width: 50px;
+}
+
+.menuBtn {}
+
+button {
+    border: none;
+    background: none;
+    font-size: 40px;
+    color: var(--interactableColor);
+    filter: drop-shadow(3px 3px 2px gray);
+    cursor: pointer;
+}
+
+button:disabled {
+    color: var(--disableButtonColor);
+}
+
+/* --- IMAGES --- */
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgContainer {
+    grid-column: 1 / -1;
+    /* height: 200px;  */
+}
+
+
+/* --- LINKS --- */
+a .logo {
+    max-height: 100%;
+
+}
+
+
+/* --- NAVBAR --- */
+nav {
+    box-shadow: 0 3px 10px rgb(138, 137, 137);
+    height: 10vh;
+    padding: var(--standardSpacing);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- FOCUS ENTRY POINTS --- */
+.focusEntrypoint {
+    grid-column: 2/-2;
+    height: 150px;
+
+}
+
+.focusEntrypoint img {
+    box-shadow: var(--shadow);
+}
+
+/* --- INSTRUCTOR --- */
+.instructor {
+    grid-column: 2/-2;
+    border-radius: var(--borderRadius);
+    box-shadow: 5px 5px 8px lightgray;
+    background: white;
+    margin: var(--smallSpacing);
+}
+
+.instructorContainer {
+    padding: var(--standardSpacing);
+
+}
+
+.instructor img {
+    border-radius: var(--round);
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.instructorIntro {
+    display: flex;
+    justify-content: center;
+}
+
+.instructorFormalities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructor .belt {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--standardSpacing);
+    padding: 0 var(--smallSpacing);
+}
+
+.instructor .stripe {
+    height: 100%;
+    width: 20px;
+
+}
+
+.instructor .black {
+    background: black;
+}
+
+.instructor .brown {
+    background: rgb(75, 53, 27);
+}
+
+.instructor .orange {
+    background: orange;
+}
+/* --- IMG WITH TEXT --- */
+.imgTextBox{
+    grid-column: 2/-2;
+    border-radius: var(--borderRadius);
+    box-shadow: 5px 5px 8px lightgray;
+    background: white;
+    margin: var(--smallSpacing);
+    padding: var(--standardSpacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+.imgTextBox img {
+    border-radius: var(--round);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    
+}
+.bestyrelse{
+    display: flex;
+}
+.bestyrelse .imgTextBox
+{
+    width: 50%;
+   
+}
+.bestyrelse .imgTextBox img{
+    width: 110px;
+    height: 110px;
+}
+.rolleText{
+    font-style: italic;
 }
