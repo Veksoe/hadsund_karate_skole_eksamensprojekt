@@ -96,14 +96,14 @@ h5,
 h6 {
 
     grid-column: 2 / -2;
-    text-align: center;
     margin: var(--smallSpacing) 0;
 }
 
 h1 {
     font-size: 1.8rem;
     text-transform: uppercase;
-    margin: var(--xLargeSpacing) 0 var(--mediumSpacing) 0;
+    margin: var(--xLargeSpacing) 0 var(--mediumSpacing) 0;    
+    text-align: center;
 }
 
 h2 {
@@ -131,12 +131,8 @@ p.instructorNavn {
     margin: -10px var(--smallSpacing);
 }
 
-p.accentText {
-    font-size: 1.1rem;
-    font-style: italic;
 
-    margin: 0 var(--smallSpacing);
-}
+
 
 /* --- BUTTONS --- */
 .btn {
@@ -246,6 +242,7 @@ footer img {
 .footerContainer {
     display: flex;
     justify-content: space-between;
+    gap: var(--mediumSpacing);
 }
 
 .footerContainer .sitemap {
