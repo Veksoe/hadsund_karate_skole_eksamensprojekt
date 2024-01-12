@@ -422,7 +422,10 @@ footer .contact .item {
     border-radius: 0;
 }
 
-
+/* --- KARATE CITATER --- */
+.karatecitater {
+    text-align: center;
+}
 
 /* --- INSTRUCTOR --- */
 .instructor {
