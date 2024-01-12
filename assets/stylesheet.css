@@ -87,6 +87,64 @@ i {
     grid-column: 1/-2;
 }
 
+/* --- BORDER COLOR --- */
+
+.borderWhite {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            rgb(224, 231, 231),
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderRed {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            var(--interactableColor),
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderBlue {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            Blue,
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderYellow {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            rgb(214, 193, 2),
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderGreen {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            Green,
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderBrown {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            rgb(145, 85, 13),
+            rgba(0, 0, 0, 0)) 1;
+}
+
+.borderBlack {
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            black,
+            rgba(0, 0, 0, 0)) 1;
+}
+
 /* --- TEXT --- */
 h1,
 h2,
@@ -102,7 +160,7 @@ h6 {
 h1 {
     font-size: 1.8rem;
     text-transform: uppercase;
-    margin: var(--xLargeSpacing) 0 var(--mediumSpacing) 0;    
+    margin: var(--mediumSpacing) 0;
     text-align: center;
 }
 
@@ -144,7 +202,7 @@ p.instructorNavn {
     grid-column: 2/-2;
     text-transform: uppercase;
     font-size: 1.2rem;
-    margin: var(--smallSpacing) 0;
+    margin: var(--largeSpacing) 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,10 +216,13 @@ p.instructorNavn {
 }
 
 .userBtn {
-    max-width: 50px;
+    font-size: 30px;
 }
 
-.menuBtn {}
+.menuBtn {
+    font-size: 30px;
+}
+
 
 button {
     border: none;
@@ -182,6 +243,7 @@ button:disabled {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: var(--borderRadius);
 }
 
 .imgContainer {
@@ -192,7 +254,8 @@ button:disabled {
 
 /* --- LINKS --- */
 a .logo {
-    max-height: 100%;
+    width: 50px;
+    height: 50px;
 
 }
 
@@ -224,6 +287,7 @@ nav {
     padding: var(--standardSpacing);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* --- FOOTER --- */
@@ -268,15 +332,17 @@ footer .contact .item {
     display: flex;
     align-items: center;
     gap: var(--smallSpacing);
-    margin-bottom: var(--smallSpacing) ;
+    margin-bottom: var(--smallSpacing);
 }
-.soMe{
+
+.soMe {
     display: flex;
     justify-content: center;
     gap: var(--largeSpacing);
-    
+
 }
-.copyright{
+
+.copyright {
     text-align: center;
 }
 
@@ -362,7 +428,7 @@ footer .contact .item {
     border-radius: var(--borderRadius);
     box-shadow: 5px 5px 8px lightgray;
     background: white;
-    margin: var(--smallSpacing) 0;
+    margin: var(--mediumSpacing) 0;
     padding: var(--standardSpacing);
     display: flex;
     flex-direction: column;
@@ -377,10 +443,24 @@ footer .contact .item {
 
 }
 
+.imgTextBox h3 {
+
+    margin: var(--smallSpacing) 0 0 0;
+}
+
+.imgTextBox p {
+    margin: 0;
+}
+
+
 .bestyrelse {
     display: flex;
 
     gap: var(--smallSpacing);
+}
+
+.bestyrelse h3 {
+    margin: var(--smallSpacing) 0 -7px 0;
 }
 
 .bestyrelse .imgTextBox {
@@ -395,6 +475,7 @@ footer .contact .item {
 
 .rolleText {
     font-style: italic;
+    margin: 0;
 }
 
 /* --- COLORED BOX --- */
@@ -420,6 +501,7 @@ footer .contact .item {
 
 .coloredBox h2 {
     width: 100%;
+    text-align: center;
 }
 
 .coloredBox .background {
