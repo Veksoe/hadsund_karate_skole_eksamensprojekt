@@ -189,8 +189,19 @@ p.instructorNavn {
     margin: -10px var(--smallSpacing);
 }
 
+p.accentTextSmall {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0;
+}
 
+.times {
+    text-align: center;
+}
 
+.times p {
+    text-align: center;
+}
 
 /* --- BUTTONS --- */
 .btn {
@@ -290,6 +301,29 @@ nav {
     align-items: center;
 }
 
+/* --- HERO --- */
+.hero .imgContainer {
+    height: 40vh;
+}
+
+.heroText {
+    background: rgba(0, 0, 0, 0.493);
+    padding: var(--mediumSpacing);
+    color: white;
+    position: absolute;
+    top: 14.5vh;
+    width: 100%;
+}
+
+.heroText h1 {
+    margin: 0;
+    margin-bottom: var(--mediumSpacing);
+}
+
+.heroText h3 {
+    text-align: center;
+}
+
 /* --- FOOTER --- */
 footer {
     box-shadow: 3px 0px 10px rgb(138, 137, 137);
@@ -361,6 +395,34 @@ footer .contact .item {
 .focusEntrypoint img {
     box-shadow: var(--shadow);
 }
+
+/* --- NEWS --- */
+.news {
+    background: white;
+    border: 2px solid var(--primaryColor);
+}
+
+.news img {
+    height: 150px;
+}
+
+.news .item {
+    border: 2px solid var(--primaryColor);
+    padding: 10px;
+}
+
+.news .headline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .btn {
+    margin: 0;
+    height: 90px;
+    border-radius: 0;
+}
+
+
 
 /* --- INSTRUCTOR --- */
 .instructor {
