@@ -36,7 +36,6 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    text-wrap: balance;
 }
 
 
@@ -178,8 +177,7 @@ h3 {
 
 p {
     grid-column: 2/-2;
-    text-align: left;
-    margin: var(--smallSpacing) 0;
+    margin: 0 0 var(--smallSpacing) 0;
 
 }
 
@@ -195,7 +193,7 @@ p.accentTextSmall {
     margin: 0;
 }
 
-.times {
+.times h3 {
     text-align: center;
 }
 
@@ -218,6 +216,7 @@ p.accentTextSmall {
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow);
+
 }
 
 .btn:hover {
@@ -264,6 +263,10 @@ button:disabled {
 
 
 /* --- LINKS --- */
+a.disabled {
+    background: var(--disableButtonColor);
+}
+
 a .logo {
     width: 50px;
     height: 50px;
@@ -498,6 +501,7 @@ footer .contact .item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .imgTextBox img {
@@ -576,4 +580,109 @@ footer .contact .item {
 
 .coloredBox .background h2 {
     text-align: left;
+}
+
+/* --- BORDERED BOX --- */
+.borderBox {
+    background: white;
+    border: 2px solid var(--accentColor);
+    border-radius: var(--borderRadius);
+    padding: var(--mediumSpacing);
+    text-align: center;
+    margin: var(--smallSpacing) 0;
+}
+
+.borderBox h3 {
+    margin-top: var(--smallSpacing);
+}
+
+@media screen and (min-width: 900px) {
+
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        text-wrap: wrap;
+        column-gap: 35px;
+    }
+
+    section {
+        display: flex;
+        column-gap: 35px;
+    }
+
+    .leftBackgroundBoxMobile {
+        background: none;
+        padding: 0;
+    }
+
+    .rightBackgroundBoxMobile {
+        background: none;
+        padding: 0;
+    }
+
+    .leftBackgroundBoxDesktop {
+        background: var(--primaryColor);
+        padding: var(--xLargeSpacing) var(--xLargeSpacing);
+        grid-column: 2/-1;
+    }
+
+    .rightBackgroundBoxDesktop {
+        background: var(--secondaryColor);
+        padding: var(--xLargeSpacing) var(--xLargeSpacing);
+        grid-column: -1/2;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+
+    }
+
+    h3 {
+        font-size: 1.7rem;
+        font-weight: 400;
+
+    }
+
+    .focusEntrypoint {
+        width: 100%;
+        height: 200px;
+    }
+
+    .focusEntrypoint .imgContainer {
+        height: 170px;
+    }
+
+    .borderBox {
+        width: 100%;
+        display: grid;
+        align-content: space-between;
+    }
+
+    .textDesktop {
+        width: 100%;
+    }
+
+    .btn {
+        width: 300px;
+        margin: var(--mediumSpacing) auto;
+    }
+
+    .gridLineup {
+        flex-direction: column;
+    }
+
+    .gridLineup div {
+        display: grid;
+        gap: 35px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .imgTextBox {
+        grid-column: unset;
+    }
+
+
 }
