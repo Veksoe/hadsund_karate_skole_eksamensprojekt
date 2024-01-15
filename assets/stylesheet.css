@@ -669,11 +669,11 @@ footer .contact .item {
     }
 
     .textDesktop {
-        width: 100%;
+        width: 50%;
     }
 
     .btn {
-        width: 300px;
+        width: auto;
         margin: var(--mediumSpacing) auto;
     }
 
