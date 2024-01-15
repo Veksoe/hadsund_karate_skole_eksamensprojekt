@@ -555,7 +555,7 @@ footer .contact .item {
 /* --- COLORED BOX --- */
 .coloredBox {
     grid-column: 2/-2;
-
+    margin-bottom: var(--mediumSpacing);
 }
 
 .coloredBox .heading {
@@ -580,7 +580,7 @@ footer .contact .item {
 
 .coloredBox .background {
     background: var(--primaryColor);
-    padding: var(--mediumSpacing) var(--standardSpacing);
+    padding: var(--largeSpacing) var(--largeSpacing);
 }
 
 .coloredBox .background h2 {
@@ -612,8 +612,8 @@ footer .contact .item {
     section {
         display: flex;
         column-gap: 35px;
-        
-        
+
+
     }
 
     .leftBackgroundBoxMobile {
@@ -683,13 +683,13 @@ footer .contact .item {
         flex-direction: column;
     }
 
-    .gridLineup > div {
+    .gridLineup>div {
         display: grid;
         gap: 35px;
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .gridLineup > p {
+    .gridLineup>p {
         width: 50%
     }
 
@@ -742,7 +742,7 @@ footer .contact .item {
     .newsContainer a {
         margin: 0 var(--standardSpacing);
     }
-    
+
     .otherNews .btn {
         margin: 0;
         height: 20%;
@@ -765,4 +765,30 @@ footer .contact .item {
         width: 70%;
     }
 
+    .faq {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--mediumSpacing);
+    }
+
+    .faq .background {
+        min-height: 180px;
+    }
+
+    .faq h2 {
+        font-size: 1.8rem;
+        text-align: left;
+        font-weight: 700;
+        min-height: 5rem;
+    }
+
+    .faq article {
+        grid-column: span 4;
+    }
+
+    .faq article:nth-child(1) {
+        grid-column: 2 / -2;
+        grid-row: 1;
+        text-wrap: balance;
+    }
 }
