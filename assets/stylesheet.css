@@ -617,11 +617,13 @@ footer .contact .item {
     .leftBackgroundBoxMobile {
         background: none;
         padding: 0;
+        grid-column: unset;
     }
 
     .rightBackgroundBoxMobile {
         background: none;
         padding: 0;
+        grid-column: unset;
     }
 
     .leftBackgroundBoxDesktop {
@@ -712,6 +714,7 @@ footer .contact .item {
 
     .newsDesktop {
         display: flex;
+        width: 60%;
     }
 
     .newsContainer {
@@ -759,4 +762,5 @@ footer .contact .item {
     .omAshihara .textDesktop {
         width: 70%;
     }
+
 }
