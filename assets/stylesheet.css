@@ -604,7 +604,7 @@ footer .contact .item {
 @media screen and (min-width: 900px) {
 
     main {
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: 2fr repeat(10, 1fr)2fr;
         text-wrap: wrap;
         column-gap: 35px;
     }
@@ -612,24 +612,26 @@ footer .contact .item {
     section {
         display: flex;
         column-gap: 35px;
+        
+        
     }
 
     .leftBackgroundBoxMobile {
         background: none;
         padding: 0;
-        grid-column: unset;
+        grid-column: 2/-2;
     }
 
     .rightBackgroundBoxMobile {
         background: none;
         padding: 0;
-        grid-column: unset;
+        grid-column: 2/-2;
     }
 
     .leftBackgroundBoxDesktop {
         background: var(--primaryColor);
         padding: var(--xLargeSpacing) var(--xLargeSpacing);
-        grid-column: 2/-1;
+        grid-column: -2/1;
     }
 
     .rightBackgroundBoxDesktop {
