@@ -400,29 +400,33 @@ footer .contact .item {
 }
 
 /* --- NEWS --- */
-.news {
+.newsMobile {
     background: white;
     border: 2px solid var(--primaryColor);
 }
 
-.news img {
+.newsMobile img {
     height: 150px;
 }
 
-.news .item {
+.newsMobile .item {
     border: 2px solid var(--primaryColor);
     padding: 10px;
 }
 
-.news .headline {
+.newsMobile .headline {
     display: flex;
     justify-content: space-between;
 }
 
-.news .btn {
+.newsMobile .btn {
     margin: 0;
     height: 90px;
     border-radius: 0;
+}
+
+.newsDesktop {
+    display: none;
 }
 
 /* --- KARATE CITATER --- */
@@ -700,5 +704,59 @@ footer .contact .item {
 
     .coloredBox {
         grid-column: unset;
+    }
+
+    .newsMobile {
+        display: none;
+    }
+
+    .newsDesktop {
+        display: flex;
+    }
+
+    .newsContainer {
+        display: flex;
+        border: solid 2px black;
+        width: 100%;
+    }
+
+    .mainNews {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        border-right: 2px solid black;
+    }
+
+    .textRight {
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .newsContainer p,
+    .newsContainer h3,
+    .newsContainer a {
+        margin: 0 var(--standardSpacing);
+    }
+    
+    .otherNews .btn {
+        margin: 0;
+        height: 20%;
+        width: 100%;
+        border-radius: 0;
+
+    }
+
+    .otherNews .item {
+        border-bottom: 2px solid black;
+        height: 40%;
+    }
+
+    .omAshihara .imgContainer {
+        height: 500px;
+        width: 30%;
+    }
+
+    .omAshihara .textDesktop {
+        width: 70%;
     }
 }
