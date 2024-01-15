@@ -13,12 +13,75 @@
 
 <body>
     <header>
-        <nav>
+
+        <nav class="navMobile">
             <a href="./index.html"><img class="logo" src="./assets/images/logo_icon_transparent.png" alt=""></a>
-            <div>
-                <button class="userBtn" disabled><i class="fa-solid fa-user"></i></button>
-                <button class="menuBtn"><i class="fa-solid fa-bars"></i></button>
+
+
+            <button class="userBtn"><i class="fa-solid fa-user"></i></button>
+            <label for="menu" class="menuBtn"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu">
+
+            <div class="menu">
+                <ul>
+                    <li> <a href="./index.html">
+                            <h2>Forside</h2>
+                        </a></li>
+                    <button class="dropdown">
+                        <h2>Klubben og Organisationen ▼</h2>
+                    </button>
+
+                    <div class="dropdownMenu">
+                        <li> <a href="./klubben_og_organisation/instruktoerene.html">
+                                <h2>Instruktører</h2>
+                            </a></li>
+                        <li><a href="./klubben_og_organisation/bestyrelsen.html">
+                                <h2>Bestyrelse</h2>
+                            </a></li>
+                        <li><a href="./klubben_og_organisation/forening.html">
+                                <h2>Forening</h2>
+                            </a></li>
+                        <li><a href="./klubben_og_organisation/ashihara.html">
+                                <h2>Ashihara</h2>
+                            </a></li>
+                        <li><a href="./klubben_og_organisation/vedtaegter.html">
+                                <h2>Vedtægter</h2>
+                            </a></li>
+                    </div>
+                    <button class="dropdown">
+                        <h2>Træning ▼</h2>
+                    </button>
+                    <div class="dropdownMenu">
+                        <li> <a href="./traening/om-traeningen.html">
+                                <h2>Om Træning</h2>
+                            </a></li>
+                        <li> <a href="./traening/traeningselementer.html">
+                                <h2>Træningsøvelser</h2>
+                            </a></li>
+                        <li> <a href="./traening/etiketter.html">
+                                <h2>Etiketter</h2>
+                            </a></li>
+                    </div>
+                    <li><a href="./tilmelding.html">
+                            <h2>Tilmelding</h2>
+                        </a></li>
+                    <button class="dropdown">
+                        <h2>Vejledning ▼</h2>
+                    </button>
+                    <div class="dropdownMenu">
+                        <li><a href="./vejledning/spoergsmaal.html">
+                                <h2>Spørgsmål</h2>
+                            </a></li>
+                        <li><a href="./vejledning/godt-at-vide.html">
+                                <h2>Godt at Vide</h2>
+                            </a></li>
+                    </div>
+                    <li><a href="./kontakt.html">
+                            <h2>Kontakt</h2>
+                        </a></li>
+                </ul>
             </div>
+
         </nav>
     </header>
     <main>
