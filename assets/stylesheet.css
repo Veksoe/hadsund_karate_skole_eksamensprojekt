@@ -66,6 +66,10 @@ i {
     color: var(--accentColor);
 }
 
+a i {
+    color: var(--interactableColor);
+}
+
 .fullWidth {
     grid-column: 1 /-1;
     display: flex;
@@ -193,13 +197,12 @@ p.accentTextSmall {
     margin: 0;
 }
 
-.times h3 {
-    text-align: center;
-}
-
+.times h2,
+.times h3,
 .times p {
     text-align: center;
 }
+
 
 /* --- BUTTONS --- */
 .btn {
@@ -219,11 +222,7 @@ p.accentTextSmall {
 
 }
 
-.btn:hover {
-    /* flyttes til media querry*/
-    background: var(--hoverButtonColor);
-    font-size: 1.3rem;
-}
+
 
 .userBtn i {
     font-size: 30px;
@@ -279,10 +278,10 @@ a.disabled {
 a.text {
     color: var(--interactableColor);
     text-decoration: underline;
+    text-transform: uppercase;
 }
 
 a:hover.text {
-    /* flyttes til media querry*/
     background: var(--interactableColor);
     color: white;
     padding: 5px;
@@ -391,6 +390,10 @@ nav .dropdownMenu {
 }
 
 /* --- HERO --- */
+.hero {
+    margin: 0;
+}
+
 .hero .imgContainer {
     height: 40vh;
 }
@@ -400,7 +403,7 @@ nav .dropdownMenu {
     padding: var(--mediumSpacing);
     color: white;
     position: absolute;
-    top: 14.5vh;
+    top: 20vh;
     width: 100%;
 }
 
@@ -474,7 +477,7 @@ footer .contact .item {
     grid-column: 2/-2;
     height: 150px;
     margin: var(--smallSpacing) 0;
-
+    text-align: center;
 }
 
 .focusEntrypoint .imgContainer {
@@ -509,6 +512,7 @@ footer .contact .item {
     margin: 0;
     height: 90px;
     border-radius: 0;
+    box-shadow: none;
 }
 
 .newsDesktop {
@@ -741,7 +745,7 @@ footer .contact .item {
     }
 
     .navDesktop a .logo {
-        
+
         height: 80px;
 
     }
@@ -754,7 +758,7 @@ footer .contact .item {
 
     .navDesktop ul {
         display: flex;
-        gap: 20px;
+        gap: 15px;
         align-items: center;
     }
 
@@ -803,6 +807,31 @@ footer .contact .item {
         margin-top: 40px;
     }
 
+    footer {
+        padding: 0 10%;
+    }
+
+    footer .logo {
+        width: 500px;
+        margin: var(--largeSpacing) 30%;
+    }
+
+    footer a:hover {
+        color: var(--interactableColor);
+    }
+
+    .footerContainer {
+        margin: 0 10%;
+    }
+
+    .hero .imgContainer {
+        height: 60vh;
+    }
+
+    .heroText {
+        top: 30vh;
+    }
+
     h1 {
         font-size: 3.5rem;
     }
@@ -818,9 +847,14 @@ footer .contact .item {
 
     }
 
+
     .focusEntrypoint {
         width: 100%;
         height: 200px;
+    }
+    .focusEntrypoint .imgContainer:hover {
+        transform: scale(1.05);
+        filter:  saturate(1.4)
     }
 
     .focusEntrypoint .imgContainer {
@@ -837,9 +871,22 @@ footer .contact .item {
         width: 50%;
     }
 
+    .textDesktop.prisDaekkelse {
+        width: 40%;
+        margin-left: 12%;
+    }
+
     .btn {
-        width: auto;
+        min-width: 320px;
+        max-width: 450px;
         margin: var(--mediumSpacing) auto;
+        font-size: 1.6rem;
+        background: var(--hoverButtonColor);
+    }
+
+    .btn:hover {
+
+        font-size: 1.7rem;
     }
 
     .gridLineup {
@@ -848,7 +895,7 @@ footer .contact .item {
 
     .gridLineup>div {
         display: grid;
-        gap: 35px;
+        column-gap: 35px;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -861,7 +908,13 @@ footer .contact .item {
     }
 
     .karatecitater h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin: var(--standardSpacing);
+        text-align: left;
+    }
+
+    .giInfo {
+        align-items: center
     }
 
     .giInfo .imgContainer {
@@ -910,8 +963,9 @@ footer .contact .item {
         margin: 0;
         height: 20%;
         width: 100%;
+        max-width: none;
         border-radius: 0;
-
+        box-shadow: none;
     }
 
     .otherNews .item {
@@ -924,8 +978,8 @@ footer .contact .item {
         width: 30%;
     }
 
-    .omAshihara .textDesktop {
-        width: 70%;
+    .times.textDesktop {
+        width: 45%;
     }
 
     .faq {
