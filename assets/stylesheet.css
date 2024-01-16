@@ -444,6 +444,7 @@ footer img {
 .sitemap a {
     color: var(--baseTextDarkColor);
     text-transform: uppercase;
+    padding: 3px;
 }
 
 footer i {
@@ -852,9 +853,10 @@ footer .contact .item {
         width: 100%;
         height: 200px;
     }
+
     .focusEntrypoint .imgContainer:hover {
         transform: scale(1.05);
-        filter:  saturate(1.4)
+        filter: saturate(1.4)
     }
 
     .focusEntrypoint .imgContainer {
@@ -933,6 +935,7 @@ footer .contact .item {
     .newsDesktop {
         display: flex;
         width: 60%;
+        margin-left: 10%;
     }
 
     .newsContainer {
