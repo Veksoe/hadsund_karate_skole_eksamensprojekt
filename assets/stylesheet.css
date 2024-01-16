@@ -270,7 +270,7 @@ a.disabled {
     background: var(--disableButtonColor);
 }
 
-a .logo {
+.navMobile a .logo {
     width: 50px;
     height: 50px;
 
@@ -319,18 +319,19 @@ nav a {
     text-decoration: none;
 }
 
-nav label {
+.navMobile label {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-nav li {
+.navMobile li {
     list-style-type: none;
     border-bottom: 1px solid var(--accentColor);
     padding: var(--standardSpacing);
 }
-.menu {
+
+.navMobile .menu {
     display: none;
     position: absolute;
     background: var(--backgroundColor);
@@ -339,48 +340,55 @@ nav li {
     justify-content: center;
     z-index: 100;
     margin: -15px;
-    top:10vh;
+    top: 10vh;
 }
 
-nav ul {
+.navMobile ul {
     padding-bottom: var(--mediumSpacing);
     padding-inline-start: 0px;
 }
 
-nav input[type=checkbox] {
+.navMobile input[type=checkbox] {
     position: absolute;
     top: -999px;
     left: -999px;
 }
 
-input[type=checkbox]:checked ~ .menu {
+input[type=checkbox]:checked~.menu {
     display: grid;
 }
-nav h2{
+
+nav h2 {
     color: var(--baseTextDarkColor);
     text-transform: uppercase;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
 }
-nav .dropdownMenu{
+
+nav .dropdownMenu {
     display: none;
 }
-nav .dropdown{
-   filter:none;
-   border-bottom: 1px solid var(--accentColor);
-   padding: var(--standardSpacing);
-   font-weight: 700;
-   width: 100%;
+
+.navMobile .dropdown {
+    filter: none;
+    border-bottom: 1px solid var(--accentColor);
+    padding: var(--standardSpacing);
+    font-weight: 700;
+    width: 100%;
 }
-nav .dropdown:focus h2{
+
+.navMobile .dropdown:focus h2 {
     font-weight: 700;
 }
-nav .dropdown:focus + .dropdownMenu{
+
+.navMobile .dropdown:focus+.dropdownMenu {
     display: grid;
 }
 
-
+.navDesktop {
+    display: none;
+}
 
 /* --- HERO --- */
 .hero .imgContainer {
@@ -679,7 +687,7 @@ footer .contact .item {
     margin-top: var(--smallSpacing);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width:1400px) {
 
     main {
         grid-template-columns: 2fr repeat(10, 1fr)2fr;
@@ -690,8 +698,13 @@ footer .contact .item {
     section {
         display: flex;
         column-gap: 35px;
+    }
 
-
+    header {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .leftBackgroundBoxMobile {
@@ -716,6 +729,78 @@ footer .contact .item {
         background: var(--secondaryColor);
         padding: var(--xLargeSpacing) var(--xLargeSpacing);
         grid-column: -1/2;
+    }
+
+
+    .navMobile {
+        display: none;
+    }
+
+    .navDesktop {
+        display: flex;
+    }
+
+    .navDesktop a .logo {
+        
+        height: 80px;
+
+    }
+
+    .navDesktop .menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navDesktop ul {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .navDesktop li {
+        list-style-type: none;
+        padding: var(--smallSpacing);
+    }
+
+    .navDesktop .dropdownMenu li {
+        border-bottom: 2px solid var(--accentColor);
+    }
+
+    .navDesktop li:hover h2 {
+        color: var(--interactableColor);
+    }
+
+    .navDesktop .dropdown {
+        width: auto;
+        border: none;
+        display: grid;
+        justify-items: center;
+    }
+
+    .navDesktop .dropdownBtn {
+        filter: none;
+        padding: var(--standardSpacing);
+    }
+
+    .navDesktop .dropdown:hover .dropdownMenu {
+        display: grid;
+    }
+
+    .navDesktop .dropdown:hover .dropdownBtn {
+        color: var(--interactableColor);
+    }
+
+    .navDesktop .dropdownMenu {
+        display: none;
+        position: absolute;
+        background-color: var(--backgroundColor);
+        min-width: 200px;
+        padding: var(--mediumSpacing);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: center;
+        margin-top: 40px;
     }
 
     h1 {
