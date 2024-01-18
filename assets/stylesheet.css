@@ -39,38 +39,37 @@
 }
 
 
-main {
+main { /* --- VI OPSTILLER MAIN I 6 KOLONNER --- */
     display: grid;
     grid-template-columns: var(--standardSpacing) repeat(4, 1fr) var(--standardSpacing);
     grid-template-rows: auto;
 }
 
-body {
+body { /* --- VI TILFØJER BAGGRUNDSFARVE, 1,5 I LINJESTØRRELSE, NY FONT OG FJERNER MARGIN --- */
     margin: 0;
     background: var(--backgroundColor);
     line-height: 1.5;
     font-family: 'Lato', sans-serif;
 }
 
-section {
+section { /* --- ALLE SEKTIONER SKAL FYLDE FRA KOLONNE 2 TIL -2 --- */
     grid-column: 2/-2;
     margin: var(--mediumSpacing) 0;
 }
 
-a {
-
+a { /* --- VI FJERNER UNDERLINE FRA VORES CTA'ER GENERELT --- */
     text-decoration: none;
 }
 
-i {
+i { /* --- ALLE IKONER FÅR EN BESTEMT FARVE GENERELT --- */
     color: var(--accentColor);
 }
 
-a i {
+a i { /* --- VI SÆTTER ALLE VORES CTA'ER OG IKONER TIL AT HAVE DEN SAMME RØDE FAREVER SOM SYMBOLISERER INTERAKTION --- */
     color: var(--interactableColor);
 }
 
-.fullWidth {
+.fullWidth { /* --- SEKTIONERNE VI VIL HAVE TIL AT HAVE EN FULD BREDDE SKAL FYLDE FRA KOLONNE 1 TIL -1 --- */
     grid-column: 1 /-1;
     display: flex;
     flex-direction: column;
@@ -92,6 +91,7 @@ a i {
 
 /* --- BORDER COLOR --- */
 
+        /* --- BRUGT TIL BÆLTEFARVERNES BOKSE, HVOR DER GIVES FARVE I KANTERNE MED EN FADE EFFEKT --- */
 .borderWhite {
     border: 3px solid;
     border-image:
@@ -154,8 +154,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-
+h6 { /* --- h1-h6 SKAL PLACERES INDEN FOR KOLONNERNE 2 TIL -2 --- */
     grid-column: 2 / -2;
     margin: var(--smallSpacing) 0;
 }
@@ -179,10 +178,9 @@ h3 {
     margin: 0px;
 }
 
-p {
+p { /* --- p SKAL DERUDOVER OGSÅ PLACERES INDEN FOR KOLONNERNE 2 TIL -2 --- */
     grid-column: 2/-2;
     margin: 0 0 var(--smallSpacing) 0;
-
 }
 
 p.instructorNavn {
@@ -205,7 +203,7 @@ p.accentTextSmall {
 
 
 /* --- BUTTONS --- */
-.btn {
+.btn { /* --- VORES CTA'ER --- */
     background-color: var(--interactableColor);
     border-radius: var(--borderRadius);
     color: white;
@@ -224,19 +222,19 @@ p.accentTextSmall {
 
 
 
-.userBtn i {
+.userBtn i { /* --- BRUGERIKON --- */
     font-size: 30px;
     margin: 0 var(--smallSpacing);
     color: var(--disableButtonColor);
 }
 
-.menuBtn i {
+.menuBtn i { /* --- MENUIKON --- */
     font-size: 30px;
     color: var(--interactableColor);
 }
 
 
-button {
+button { 
     border: none;
     background: none;
     font-size: 40px;
@@ -245,7 +243,7 @@ button {
     cursor: pointer;
 }
 
-button:disabled {
+button:disabled { /* --- TIL KNAPPER DER INGEN STEDER FØRER HEN --- */
     color: var(--disableButtonColor);
 }
 
@@ -265,7 +263,7 @@ button:disabled {
 
 
 /* --- LINKS --- */
-a.disabled {
+a.disabled { /* --- TIL CTA'ER DER INGEN STEDER FØRER HEN --- */
     background: var(--disableButtonColor);
 }
 
@@ -281,14 +279,16 @@ a.text {
     text-transform: uppercase;
 }
 
-a:hover.text {
+a:hover.text { /* --- TEKST I CTA'ER FÅR ALLE EN BESTEMT HOVER-EFFEKT --- */
     background: var(--interactableColor);
     color: white;
     padding: 5px;
     border-radius: var(--borderRadius);
 }
 
-a[href^="tel:"] {
+
+
+a[href^="tel:"] { /* --- Alt der starter med "a href" skal have en bestemt farve --- */
     color: var(--baseTextDarkColor);
 }
 
@@ -330,7 +330,7 @@ nav a {
     padding: var(--standardSpacing);
 }
 
-.navMobile .menu {
+.navMobile .menu { /* --- GEMMER BURGERMENU PÅ MOBIL, HVIS DER IKKE INTERAGERES MED DEN --- */
     display: none;
     position: absolute;
     background: var(--backgroundColor);
@@ -365,7 +365,7 @@ nav h2 {
     font-weight: 400;
 }
 
-nav .dropdownMenu {
+.navMobile .dropdownMenu {
     display: none;
 }
 
@@ -424,7 +424,7 @@ footer {
     flex-direction: column;
 }
 
-footer img {
+footer img { /* --- FOOTER-LOGO --- */
     width: 100%;
     margin: var(--standardSpacing) 0;
 }
@@ -441,13 +441,13 @@ footer img {
     gap: 5px;
 }
 
-.sitemap a {
+.sitemap a { /* --- ALLE SIDER I FOOTEREN FÅR ALLE TEKSTJUSTERINGER --- */
     color: var(--baseTextDarkColor);
     text-transform: uppercase;
     padding: 3px;
 }
 
-footer i {
+footer i { /* --- ALLE IKONER I FOOTEREN FÅR ALLE SAMME STØRRELSE */
     font-size: 30px;
 }
 
@@ -455,7 +455,7 @@ footer .contact p {
     margin: 0;
 }
 
-footer .contact .item {
+footer .contact .item { 
     display: flex;
     align-items: center;
     gap: var(--smallSpacing);
@@ -474,8 +474,7 @@ footer .contact .item {
 }
 
 /* --- FOCUS ENTRY POINTS --- */
-.focusEntrypoint {
-    grid-column: 2/-2;
+.focusEntrypoint { /* --- FOCUSED ENTRY POINTS SÆTTES OP I DISPLAY: GRID, DA DE STÅR I EN SEKTION I FORVEJEN */
     height: 150px;
     margin: var(--smallSpacing) 0;
     text-align: center;
@@ -587,7 +586,7 @@ footer .contact .item {
 }
 
 /* --- IMG WITH TEXT --- */
-.imgTextBox {
+.imgTextBox { /* --- VI BRUGER DISPLAY GRID TIL BILLEDE MED TEKST DE STEDER, HVOR DE IKKE STÅR I EN SEKTION ALLEREDE --- */
     grid-column: 2/-2;
     border-radius: var(--borderRadius);
     box-shadow: 5px 5px 8px lightgray;
@@ -597,7 +596,6 @@ footer .contact .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .imgTextBox img {
@@ -617,6 +615,7 @@ footer .contact .item {
     margin: 0;
 }
 
+/* --- BESTYRELSE --- */
 
 .bestyrelse {
     display: flex;
@@ -692,9 +691,11 @@ footer .contact .item {
     margin-top: var(--smallSpacing);
 }
 
+/* --- DESKTOP-VERSION --- */
+
 @media screen and (min-width:1400px) {
 
-    main {
+    main { /* --- VI SÆTTER VORES MAIN OP I 12 KOLONNER MED DISPLAY: GRID --- */
         grid-template-columns: 2fr repeat(10, 1fr)2fr;
         text-wrap: wrap;
         column-gap: 35px;
@@ -792,11 +793,11 @@ footer .contact .item {
         display: grid;
     }
 
-    .navDesktop .dropdown:hover .dropdownBtn {
+    .navDesktop .dropdown:hover .dropdownBtn { /* --- UNDERSIDERNE I DROPDOWN MENU FÅR EN RØD FARVE VIA HOVER EFFEKT --- */
         color: var(--interactableColor);
     }
 
-    .navDesktop .dropdownMenu {
+    .navDesktop .dropdownMenu { /* --- GEMMER DROPDOWN MENU TIL DESKTOP, HVIS DER IKKE INTERAGERES MED DEN --- */
         display: none;
         position: absolute;
         background-color: var(--backgroundColor);
@@ -854,7 +855,7 @@ footer .contact .item {
         height: 200px;
     }
 
-    .focusEntrypoint .imgContainer:hover {
+    .focusEntrypoint .imgContainer:hover { /* --- FOCUSED ENTRY POINTS BLIVER 1.05 STØRRE VED HOVER EFFEKT */
         transform: scale(1.05);
         filter: saturate(1.4)
     }
@@ -870,7 +871,7 @@ footer .contact .item {
         align-content: space-between;
     }
 
-    .textDesktop {
+    .textDesktop { /* VI FÅR TEKSTEN TIL AT FYLDE 50% I BREDDEN PÅ DESKTOP */
         width: 50%;
     }
 
@@ -986,7 +987,7 @@ footer .contact .item {
         width: 45%;
     }
 
-    .faq {
+    .faq { /* --- VI SÆTTER VORES SPØRGSMÅL TIL AT FYLDE I ALLE 12 KOLONNER MED 1fr I HVER SIDE --- */
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: var(--mediumSpacing);
@@ -1003,11 +1004,11 @@ footer .contact .item {
         min-height: 5rem;
     }
 
-    .faq article {
+    .faq article { /* --- VI SÆTTER ALLE VORES SPØRGSMÅL (UNDTAGEN 1.) TIL AT FYLDE 4 KOLONNER --- */
         grid-column: span 4;
     }
 
-    .faq article:nth-child(1) {
+    .faq article:nth-child(1) { /* --- VI SÆTTER VORES 1. SPØRGSMÅL TIL AT FYLDE FRA KOLONNE 2 TIL -2 --- */
         grid-column: 2 / -2;
         grid-row: 1;
         text-wrap: balance;
