@@ -859,8 +859,9 @@ footer .contact .item {
         filter: saturate(1.4)
     }
 
-    .focusEntrypoint .imgContainer {
+    .focusEntrypoint .imgContainer img {
         height: 170px;
+        object-position: 50% 30%;
     }
 
     .borderBox {
