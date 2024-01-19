@@ -76,14 +76,14 @@ a i { /* --- VI SÆTTER ALLE VORES CTA'ER OG IKONER TIL AT HAVE DEN SAMME RØDE 
 }
 
 /* Primary background colour Box */
-.leftBackgroundBoxMobile {
+.leftBackgroundBoxMobile { /* --- SEKTIONSBOKSE STARTER HELT UDE FRA VENSTRE SIDE OG EFTERLADER PLADS I HØJRE SIDE --- */
     background: var(--primaryColor);
     padding: var(--mediumSpacing) var(--mediumSpacing);
     grid-column: 2/-1;
 }
 
 /* Secondary background colour Box */
-.rightBackgroundBoxMobile {
+.rightBackgroundBoxMobile { /* --- SEKTIONSBOKSE STARTER HELT UDE FRA HØJRE SIDE OG EFTERLADER PLADS I VENSTRE SIDE --- */
     background: var(--secondaryColor);
     padding: var(--mediumSpacing) var(--mediumSpacing);
     grid-column: 1/-2;
@@ -159,6 +159,8 @@ h6 { /* --- h1-h6 SKAL PLACERES INDEN FOR KOLONNERNE 2 TIL -2 --- */
     margin: var(--smallSpacing) 0;
 }
 
+        /* --- h1, h2, h3 OG p STYLES MED STØRRELSE, STORE BOGSTAVER (UPPERCASE), FONT-STYLE, FARVE OG JUSTERING AF MARGIN --- */
+
 h1 {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -183,13 +185,13 @@ p { /* --- p SKAL DERUDOVER OGSÅ PLACERES INDEN FOR KOLONNERNE 2 TIL -2 --- */
     margin: 0 0 var(--smallSpacing) 0;
 }
 
-p.instructorNavn {
+p.instructorNavn { /* --- p FÅR EN STØRRE SKRIFTSTØRRELSE OG FEDERE TEKST --- */
     font-size: 1.3rem;
     font-weight: 700;
     margin: -10px var(--smallSpacing);
 }
 
-p.accentTextSmall {
+p.accentTextSmall { /* --- ANVENDES TIL TEKSTSTYKKER MED SMÅT SKRIFT SÅSOM DATOER --- */
     font-style: italic;
     font-size: 0.9rem;
     margin: 0;
@@ -197,7 +199,7 @@ p.accentTextSmall {
 
 .times h2,
 .times h3,
-.times p {
+.times p { /* --- TEKST I TRÆNINGSTIDER-SEKTIONER CENTRERES --- */
     text-align: center;
 }
 
@@ -217,10 +219,7 @@ p.accentTextSmall {
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow);
-
 }
-
-
 
 .userBtn i { /* --- BRUGERIKON --- */
     font-size: 30px;
@@ -234,7 +233,7 @@ p.accentTextSmall {
 }
 
 
-button { 
+button { /* --- KNAPPER DER FORETAGER HANDLINGER PÅ SAMME SIDE --- */
     border: none;
     background: none;
     font-size: 40px;
@@ -248,7 +247,7 @@ button:disabled { /* --- TIL KNAPPER DER INGEN STEDER FØRER HEN --- */
 }
 
 /* --- IMAGES --- */
-.imgContainer img {
+.imgContainer img { /* --- BILLEDER I IMGCONTAINER SKAL FYLDE DET HELE --- */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -256,7 +255,7 @@ button:disabled { /* --- TIL KNAPPER DER INGEN STEDER FØRER HEN --- */
     border-radius: var(--borderRadius);
 }
 
-.imgContainer {
+.imgContainer { /* --- IMGCONTAINER SKAL FYLDE FRA KOLONNE 1 TIL -1 --- */
     grid-column: 1 / -1;
     /* height: 200px;  */
 }
@@ -267,13 +266,13 @@ a.disabled { /* --- TIL CTA'ER DER INGEN STEDER FØRER HEN --- */
     background: var(--disableButtonColor);
 }
 
-.navMobile a .logo {
+.navMobile a .logo { /* --- HEADER-LOGO TIL MOBIL FÅR SAMME HØJDE OG BREDDE I PX --- */
     width: 50px;
     height: 50px;
 
 }
 
-a.text {
+a.text { /* --- STYLING AF CTA'ET MED RØD TEKST OG UNDERLINE --- */
     color: var(--interactableColor);
     text-decoration: underline;
     text-transform: uppercase;
@@ -288,16 +287,16 @@ a:hover.text { /* --- TEKST I CTA'ER FÅR ALLE EN BESTEMT HOVER-EFFEKT --- */
 
 
 
-a[href^="tel:"] { /* --- Alt der starter med "a href" skal have en bestemt farve --- */
+a[href^="tel:"] { /* --- ALT DER STARTER MED "a href" INKL. "tel" SKAL HAVE EN BESTEMT FARVE --- */
     color: var(--baseTextDarkColor);
 }
 
-a[href^="mailto:"] {
+a[href^="mailto:"] { /* --- ALT DER STARTER MED "a href" INKL. "mailto" SKAL HAVE EN BESTEMT FARVE --- */
     color: var(--baseTextDarkColor);
 }
 
 /* --- NAVBAR --- */
-header {
+header { /* --- HEADER STYLES MED HØJDE, FARVE, DROPSHADOW, POSITIONING OG PADDING MM. --- */
     box-shadow: 0 3px 10px rgb(138, 137, 137);
     height: 10vh;
     padding: var(--standardSpacing);
@@ -308,7 +307,6 @@ header {
 }
 
 nav {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -318,13 +316,13 @@ nav a {
     text-decoration: none;
 }
 
-.navMobile label {
+.navMobile label { 
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.navMobile li {
+.navMobile li { /* --- SIDER- OG UNDERSIDERS TITLER I NAVIGATION STYLES --- */
     list-style-type: none;
     border-bottom: 1px solid var(--accentColor);
     padding: var(--standardSpacing);
@@ -390,7 +388,7 @@ nav h2 {
 }
 
 /* --- HERO --- */
-.hero {
+.hero { /* --- HERO SKAL FYLDE HELT UD TIL KANTERNE UD FRA DET ELEMENT DET STÅR I --- */
     margin: 0;
 }
 
@@ -474,13 +472,13 @@ footer .contact .item {
 }
 
 /* --- FOCUS ENTRY POINTS --- */
-.focusEntrypoint { /* --- FOCUSED ENTRY POINTS SÆTTES OP I DISPLAY: GRID, DA DE STÅR I EN SEKTION I FORVEJEN */
+.focusEntrypoint { /* --- OBS. FOCUSED ENTRY POINTS SÆTTES OP I DISPLAY: GRID, DA DE STÅR I EN SEKTION I FORVEJEN */
     height: 150px;
     margin: var(--smallSpacing) 0;
     text-align: center;
 }
 
-.focusEntrypoint .imgContainer {
+.focusEntrypoint .imgContainer { 
     height: 120px;
 }
 
@@ -701,7 +699,7 @@ footer .contact .item {
         column-gap: 35px;
     }
 
-    section {
+    section { /* --- INDHOLD I SEKTIONER TIL DESKTOP SÆTTES I DISPLAY: FLEX --- */
         display: flex;
         column-gap: 35px;
     }
